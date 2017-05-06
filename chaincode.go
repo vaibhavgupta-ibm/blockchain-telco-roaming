@@ -18,8 +18,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"strconv"
-	
+	"strconv"	
 
 	"github.com/hyperledger/fabric/core/chaincode/shim"
 )
@@ -80,8 +79,8 @@ func (t *SimpleChaincode) Invoke(stub shim.ChaincodeStubInterface, function stri
 func (t *SimpleChaincode) Query(stub shim.ChaincodeStubInterface, function string, args []string) ([]byte, error) {
 	fmt.Println("query is running " + function)
 
-	// Handle different functions
-	if function == "readtxntotal" { //read a variable
+	// query different functions
+	if function == "readtxnsummary" {
 		return t.readTxnSummary(stub, args)
 	} else if function == "readledgerentry" {
 		return t.readLedgerEntryByCDRid(stub, args)
