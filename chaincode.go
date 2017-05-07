@@ -29,7 +29,7 @@ type LedgerEntry struct {
 	TxnType string `json:"txntype"`
 	TxnAmount float64 `json:"txnamount"`
 	InvoiceTo string `json:"invoiceto"`
-	InvoiceFrom string `json:"invoiceto"`
+	InvoiceFrom string `json:"invoicefrom"`
 	CDRid string `json:"cdrid"`
 
 }
